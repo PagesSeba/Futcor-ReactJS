@@ -8,7 +8,7 @@ function App() {
         <div>
           <NavBar></NavBar>
         </div>
-        <ItemListContainer />
+        <ItemListContainer bienvenida="Bienvenidos a Futcor!" subtitulo="Indumentaria de los cuatro grandes de Córdoba Capital!"/>
     
     
     
