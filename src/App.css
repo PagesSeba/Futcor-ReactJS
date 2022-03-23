@@ -60,8 +60,17 @@ ul.navbar li {
 }
 .card {
   width: 300px;
-  height: 410px;
+  height: 460px;
 }
 .precios {
   font-weight: bold;
+}
+.contador {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+}
+.btnContador {
+  border-radius: 100px;
 }
