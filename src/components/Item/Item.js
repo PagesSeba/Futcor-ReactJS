@@ -3,8 +3,8 @@ import Button from '@mui/material/Button';
 import ItemCount from '../ItemCount/ItemCount';
 
 
-function Card(props) {
-    const{img , equipo , info , precio , stock} = props
+function Item(props) {
+    const{img , equipo , info , precio , id,  stock} = props
     
     const onAdd = (contador) => {
         return (
@@ -16,11 +16,12 @@ function Card(props) {
         <div className="sombras card">
             <img src={img} className="casacas"></img>
             <h2>{equipo}</h2>
-            <p>{info}</p>
+            <p className='small'>{info}</p>
+            <Button>Más Información</Button>
             <p className="precios">{precio}</p>
             <ItemCount stock={stock} onAdd={onAdd} initial={1}/>
         </div>
     )
 }
 
-export default Card
+export default Item
