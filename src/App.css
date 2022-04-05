@@ -57,16 +57,7 @@ ul.navbar li {
   align-content: center;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: 500px;
-  margin-left: 0px;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  justify-self: center;
-  position: relative;
-  left: 120px;
+  justify-content: center;
 }
 .sombras {
     box-shadow: 1px 1px 5px grey;
@@ -74,11 +65,15 @@ ul.navbar li {
 }
 .card {
   width: 300px;
-  height: 460px;
+  height: 400px;
   margin-top: 30px;
+  margin-right: 100px;
 }
 .small {
   font-size: small;
+}
+.negro {
+  color: black
 }
 .precios {
   font-weight: bold;

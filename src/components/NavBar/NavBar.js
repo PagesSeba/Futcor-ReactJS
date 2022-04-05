@@ -13,8 +13,8 @@ function NavBar() {
           </div>
             <ul className="navbar">
               <li><Link to={'/'} className="linkNV"><Button>Inicio</Button></Link></li>
-              <li><Link to={'/tienda'} className="linkNV"><Button>Tienda</Button></Link></li>
-              <li><Link to={'/locales'} className="linkNV"><Button>Locales</Button></Link></li>
+              <li><Link to={'/'} className="linkNV"><Button>Tienda</Button></Link></li>
+              <li><Link to={'/titulares'} className="linkNV"><Button>Locales</Button></Link></li>
               <li><Link to={'/suplentes'} className="linkNV"><Button>Suplentes</Button></Link></li>
               <li><Link to={'/contacto'} className="linkNV"><Button>Contacto</Button></Link></li>
             </ul>

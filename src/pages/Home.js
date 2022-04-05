@@ -4,7 +4,7 @@ import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailCon
 
 const Home = () => {
     return(
-            <ItemListContainer bienvenida="Bienvenidos a Futcor!" subtitulo="Camisetas de los cuatro grandes de Córdoba Capital!"/>
+            <ItemListContainer/>
     )
 }
 
