@@ -1,16 +1,33 @@
 import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Home from './pages/Home';
+import Camisetas from './pages/Camisetas';
+import CamisetasDetalle from './pages/CamisetasDetalle';
+import Nosotros from './pages/Nosotros';
+import Contacto from './pages/Contacto';
+import Error404 from './pages/Error404';
+
+
 
 function App() {
   return (
     <div className="App">
-        <div>
-          <NavBar></NavBar>
-        </div>
-        <ItemListContainer bienvenida="Bienvenidos a Futcor!" subtitulo="Indumentaria de los cuatro grandes de Córdoba Capital!"/>
-        <ItemDetailContainer/>
+        <BrowserRouter>
+
+          <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/tienda" element={<Camisetas />} />
+              <Route path="/tienda/:id" element={<CamisetasDetalle />} />
+              <Route path="/nosotros" element={<Nosotros />} />
+              <Route path="/contacto" element={<Contacto />} />
+              <Route path='*' element={<Error404 />}/>
+            </Routes>
+        </BrowserRouter>
     
     
     </div>

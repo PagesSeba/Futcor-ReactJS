@@ -1,35 +1,29 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Item from "../Item/Item";
+import {mockCatalogo} from "../../Catalogo/Catalogo"
 
 
 
-function ItemDetailContainer() {
+function ItemDetailContainer({id}) {
     
 
-    const mockCamiseta = {
-        img: "BelgranoTitular.jpg", 
-        equipo: "Belgrano" ,
-        precio: "$6500", 
-        stock: 3 ,
-        info: "Camiseta Titular de la temporada 20/21" ,
-        detalle: "Ancho: 58cm | Largo: 76cm",
-        talle: "L"
-        }
+    const [casaca, setCasaca] = useState({});
 
-    const [casaca, setCasaca] = useState([]);
-
-    const getItem = async () => {
+    const getItem = () => {
         let promise = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(mockCamiseta), 2000);
+            setTimeout(() => resolve(mockCatalogo), 2000);
         })
-        let result = await promise;
+        let result = promise;
         return result;
     };
 
     useEffect(() => {
         getItem()
-            .then( data => setCasaca(data) )
+            .then( data => {
+                const finded = data.find(camiseta => camiseta.id == id);
+                setCasaca(finded)
+            } )
                 .finally('Llamada terminada!');
     })
     return(
