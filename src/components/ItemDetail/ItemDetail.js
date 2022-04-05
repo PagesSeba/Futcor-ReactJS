@@ -1,5 +1,6 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
+import {mockCatalogo} from "../../Catalogo/Catalogo"
 
 function ItemDetail({item}){
     const {img, equipo, precio, stock, info, detalle, talle} = item

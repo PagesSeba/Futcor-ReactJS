@@ -32,8 +32,8 @@ export default function form() {
             <Checkbox />
         </div>
         <div className='formBtn'>
-            <Button classname="btnForm" variant="contained" color="error">Borrar</Button>
-            <Button classname="btnForm" variant="contained" color="success">Enviar</Button>
+            <Button sx={{ mr: 2 }}  variant="contained" color="error">Borrar</Button>
+            <Button sx={{ mr: 2 }}  variant="contained" color="success">Enviar</Button>
         </div>
     </Box>
   );

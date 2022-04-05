@@ -3,7 +3,7 @@ import Form from '../components/Form/Form'
 const Contacto = () => {
     return(
         <>
-            <h1> FutCor | Contacto </h1>
+            <h1>Contacto </h1>
             <Form />
         </>
     )
