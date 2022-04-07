@@ -9,6 +9,7 @@ import Camisetas from './pages/Camisetas';
 import CamisetasDetalle from './pages/CamisetasDetalle';
 import Contacto from './pages/Contacto';
 import Error404 from './pages/Error404';
+import Carrito from './pages/Carrito';
 
 
 
@@ -23,6 +24,7 @@ function App() {
               <Route path="/:category" element={<Camisetas />} />
               <Route path="/:category/:id" element={<CamisetasDetalle />} />
               <Route path="/contacto" element={<Contacto />} />
+              <Route path="/cart" element={<Carrito />} />
               <Route path='*' element={<Error404 />}/>
             </Routes>
         </BrowserRouter>
