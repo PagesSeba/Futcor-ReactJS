@@ -12,87 +12,95 @@ export const mockCatalogo = [{
     id : 1 ,
     equipo:"Belgrano" ,
     info:"Camiseta Titular de la temporada 20/21" ,
-    precio:"$6500",
+    precio: 6500 ,
     detalle: "Ancho: 58cm | Largo: 76cm | Poliéster",
     talle: "L",
-    categoria: "titulares",
-    stock: 3
+    categoria: "Titular",
+    stock: 3,
+    cantidad: 1
 },
 {
     img: TalleresTitular,
     id : 2,
     equipo:"Talleres" ,
     info:"Camiseta Titular de la temporada 20/21" ,
-    precio:"$7000",
+    precio: 7000 ,
     detalle: "Ancho: 54cm | Largo: 70cm | Poliéster",
     talle:  "M",
-    categoria: "titulares",
-    stock: 5
+    categoria: "Titular",
+    stock: 5,
+    cantidad: 1
 },
 { 
     img: InstitutoTitular,
     id : 3 ,
     equipo:"Instituto" ,
     info:"Camiseta Titular de la temporada 20/21" ,
-    precio:"$4000",
+    precio: 4000 ,
     detalle: "Ancho: 62cm | Largo: 80cm | DryFit",
     talle: "XL",
-    categoria: "titulares",
-    stock: 7
+    categoria: "Titular",
+    stock: 7,
+    cantidad: 1
 },
 {
     img: RacingTitular,
     id : 4 ,
     equipo:"Racing" ,
     info:"Camiseta Titular de la temporada 20/21" ,
-    precio:"$3750",
+    precio: 3750 ,
     detalle: "Ancho: 62cm | Largo: 80cm | Poliéster",
     talle: "XL",
-    categoria: "titulares",
-    stock: 9
+    categoria: "Titular",
+    stock: 9,
+    cantidad: 1
 },
 {
     img: BelgranoSuplente,
     id : 5 ,
     equipo:"Belgrano" ,
     info:"Camiseta Suplente de la temporada 20/21" ,
-    precio:"$6250",
+    precio: 6250 ,
     detalle: "Ancho: 58cm | Largo: 76cm | Poliéster",
     talle: "L",
-    categoria: "suplentes",
-    stock: 4
+    categoria: "Suplente",
+    stock: 4,
+    cantidad: 1
 },
 {
     img: TalleresSuplente,
     id : 6,
     equipo:"Talleres" ,
     info:"Camiseta Suplente de la temporada 20/21" ,
-    precio:"$6000",
+    precio: 6000 ,
     detalle: "Ancho: 54cm | Largo: 70cm | Poliéster",
     talle:  "M",
-    categoria: "suplentes",
-    stock: 6
+    categoria: "Suplente",
+    stock: 6,
+    cantidad: 1
 },
 { 
     img: InstitutoSuplente,
     id : 7 ,
     equipo:"Instituto" ,
     info:"Camiseta Suplente de la temporada 20/21" ,
-    precio:"$3600",
+    precio: 3600 ,
     detalle: "Ancho: 62cm | Largo: 80cm | DryFit",
     talle: "XL",
-    categoria: "suplentes",
-    stock: 12
+    categoria: "Suplente",
+    stock: 12,
+    cantidad: 1
 },
 {
     img: RacingSuplente,
     id : 8 ,
     equipo:"Racing" ,
     info:"Camiseta Suplente de la temporada 20/21" ,
-    precio:"$3500",
+    precio: 3500 ,
     detalle: "Ancho: 58cm | Largo: 76cm | DryFit",
     talle: "L",
-    categoria: "suplentes",
-    stock: 10
+    categoria: "Suplente",
+    stock: 10,
+    cantidad: 1
 }
 ]

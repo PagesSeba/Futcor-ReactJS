@@ -1,18 +1,26 @@
-import React, {useState} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import Button from '@mui/material/Button';
 import {mockCatalogo} from "../../Catalogo/Catalogo"
+import CartContext from "../../context/CartContext";
+import {useParams} from "react-router-dom"
 
 function ItemDetail({item}){
     const {img, equipo, precio, stock, info, detalle, talle} = item
-    
+    const {cartProducts, addProductsToCart} = useContext(CartContext)
     const [click, setClick] = useState(true);
 
+
     const onAdd = (contador) => {
-        alert(`!${contador} Camisetas Agregadas al Carrito!`)
+        alert(`!${contador} Camisetas de ${equipo} Agregadas al Carrito!`)
         if (contador > 0 ){
             setClick(!click)
+            item.precio *=contador;
+            item.stock-=contador;
+            item.cantidad=contador;
+            addProductsToCart(item);
+            console.log("agregado al carro:", item)
         
           }
     }
@@ -28,10 +36,10 @@ function ItemDetail({item}){
                 <p className="precios">Información: {info}</p>
                 <p className="precios">Talle: {talle}</p>
                 <p className="precios">Detalle: {detalle}</p>
-                <p className="precios">Precio: {precio}</p>
+                <p className="precios">Precio: ${precio}</p>
                 { click ? (
                     <div>
-                        <ItemCount stock={stock} onAdd={onAdd} initial={1}/>
+                            <ItemCount stock={stock} onAdd={onAdd} initial={1}/>
                     </div>  
                 ) : (
                     <div className="mt10">
