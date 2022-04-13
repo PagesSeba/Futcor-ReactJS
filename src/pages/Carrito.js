@@ -41,8 +41,8 @@ const Carrito = () => {
 
                 ) : (
                     <div className="cartVacio">
-                        <p> No hay productos en el carrito.</p>
-                        <Link to={"/"} className="linkNV" ><Button color="warning">Productos</Button></Link>
+                        <p> No hay camisetas en el carrito.</p>
+                        <Link to={"/"} className="linkNV" ><Button color="warning">Camisetas</Button></Link>
                     </div>
                 )
 

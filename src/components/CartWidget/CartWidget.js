@@ -22,10 +22,16 @@ function CartWidget() {
       setAnchorEl(null);
     };
     console.log("cartProducts: ", cartProducts)
+
+    let cantidadItems = cartProducts.length
   
     return (
+    <>
+        {
+    cantidadItems ? (
+        <>
         <div>
-          <Badge badgeContent={cartProducts.length} color="primary" showZero>
+          <Badge badgeContent={cantidadItems} color="primary" showZero>
             <ShoppingCartIcon 
                 id="basic-button"
                 aria-controls={open ? 'basic-menu' : undefined}
@@ -75,14 +81,22 @@ function CartWidget() {
                 <Divider />
                 <div className='irACarrito'>
                     <Link to="/cart" className="linkNV">
-                        <Button className="btnCarrito" variant="contained" color="primary" >
+                        <Button className="btnCarrito" variant="contained" color="primary" > 
                             Ir a Carrito
                         </Button>
                     </Link>
                 </div>
             </Menu>
         </div>
-    )
+    
+        </>
+    ):(
+          <div></div>
+        )
+      }
+
+    </>
+  )
     
     }
     
