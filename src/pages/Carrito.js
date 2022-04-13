@@ -5,9 +5,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Link } from "react-router-dom"
 import { Container } from "@mui/material";
 import { IconButton } from "@mui/material";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import ShopIcon from '@mui/icons-material/Shop';
+import { Shop } from "@mui/icons-material";
 
 const Carrito = () => {
-    const { cartProducts, deleteProducts, totalPrice } = useContext(CartContext)
+    const { cartProducts, deleteProducts, totalPrice, clearCart } = useContext(CartContext)
 
     return (
         <>
@@ -34,7 +37,10 @@ const Carrito = () => {
 
                     <Container className="pTotal">
                         <h4>Total: ${totalPrice()}</h4>
-                        <Button color="success" variant="contained">Finalizar Compra</Button>
+                        <div className="btnCartWidget">
+                        <Button variant="contained" color="error" endIcon={<DeleteForeverIcon />} onClick={() => clearCart()}>Descartar Compra</Button>
+                        <Button color="success" variant="contained" endIcon={<ShopIcon/>}>Finalizar Compra</Button>
+                        </div>
                     </Container>
 
                     </div>

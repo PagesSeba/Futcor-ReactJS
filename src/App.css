@@ -159,4 +159,9 @@ ul.navbar li {
   flex-direction: column;
   border-bottom: 1px dotted grey;
 }
+.btnCartWidget {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 

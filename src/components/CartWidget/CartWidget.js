@@ -9,10 +9,11 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import CartContext from '../../context/CartContext';
 import { Badge } from '@mui/material';
 import {IconButton} from '@mui/material'
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 function CartWidget() {
     
-    const { cartProducts, deleteProducts } = useContext(CartContext)
+    const { cartProducts, deleteProducts, clearCart} = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -79,12 +80,19 @@ function CartWidget() {
                 })}
                 
                 <Divider />
-                <div className='irACarrito'>
-                    <Link to="/cart" className="linkNV">
-                        <Button className="btnCarrito" variant="contained" color="primary" > 
-                            Ir a Carrito
-                        </Button>
-                    </Link>
+                <div className="btnCartWidget">
+                    <div className='irACarrito'>
+                        <Link to="/cart" className="linkNV">
+                            <Button className="btnCarrito" variant="contained" color="primary" > 
+                                Ir a Carrito
+                            </Button>
+                        </Link>
+                    </div>
+                    <div>
+                        <IconButton onClick={() => clearCart()}>
+                            <DeleteForeverIcon color="error"/>
+                        </IconButton>
+                    </div>
                 </div>
             </Menu>
         </div>

@@ -16,6 +16,9 @@ const CartProvider = ({children}) => {
          return cartProducts.id !== product.id
      }))
     }
+    const clearCart = () => {
+        setCartProducts([]);
+    }
 
     const totalPrice = () => {
         let total = 0
@@ -29,7 +32,8 @@ const data = {
     cartProducts,
     addProductsToCart,
     deleteProducts,
-    totalPrice
+    totalPrice,
+    clearCart
 }
     
 
