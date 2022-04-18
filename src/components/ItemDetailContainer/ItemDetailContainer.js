@@ -1,31 +1,40 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Item from "../Item/Item";
-import {mockCatalogo} from "../../Catalogo/Catalogo"
+import { doc, getDoc } from "firebase/firestore";
+import db from "../../firebase";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom"
 
 
 
-function ItemDetailContainer({id}) {
+function ItemDetailContainer() {
     
-
+    const { id } = useParams();
     const [casaca, setCasaca] = useState({});
+    const navigate = useNavigate()
 
-    const getItem = () => {
-        let promise = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(mockCatalogo), 2000);
-        })
-        let result = promise;
-        return result;
-    };
 
-    useEffect(() => {
-        getItem()
-            .then( data => {
-                const finded = data.find(camiseta => camiseta.id == id);
-                setCasaca(finded)
-            } )
-                .finally('Llamada terminada!');
-    })
+
+    const getProduct = async() => {
+        const docRef = doc(db, "productos", id);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            let product = docSnap.data()
+            product.id = docSnap.id
+            setCasaca(product)
+    
+        } else {
+            navigate("/Error404")
+
+        }
+    }
+
+    useEffect( () => {
+        getProduct();
+    }, [id])
+
     return(
         <div>
             <h2>Detalle de la Camiseta:</h2>

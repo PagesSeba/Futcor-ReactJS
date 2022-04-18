@@ -3,7 +3,8 @@ import Item from '../Item/Item'
 import ItemCount from '../ItemCount/ItemCount'
 import ItemList from '../ItemList/ItemList'
 import {Link, useParams} from "react-router-dom"
-import { mockCatalogo } from '../../Catalogo/Catalogo'
+import { collection, getDocs, query , where } from "firebase/firestore"
+import db from "../../firebase"
 
 
 
@@ -11,10 +12,16 @@ function ItemListContainer() {
     const { category } = useParams();
     const [products, setProducts] = useState([])
 
-    const getProducts = () => {
-        return new Promise((resolve, reject) => {
-            return resolve(mockCatalogo)
+    const getProducts = async () => {
+        const itemsCollection = collection(db, "productos")
+        const productosSnapshot = await getDocs(itemsCollection)
+        console.log("productosSnapshot : ", productosSnapshot)
+        const productList = productosSnapshot.docs.map((doc) => {
+            let product = doc.data()
+            product.id = doc.id
+            return product
         })
+        return productList
     }
 
     useEffect(() => {
