@@ -63,7 +63,7 @@ function CartWidget() {
                     return(
                         <MenuItem className='modalCarrito' key={cartProduct.id}>
                             <div>
-                                <img className='imgCarrito' src={cartProduct.img} /> 
+                                <img className='imgCarrito' src={`/assets/images/${cartProduct.img}`} /> 
                             </div>
                             <div className='infoCarrito'>
                                 <div className="precios col">

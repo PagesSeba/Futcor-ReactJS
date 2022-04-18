@@ -64,7 +64,7 @@ function ItemListContainer() {
                                     equipo={equipo}
                                     precio={precio}
                                     info={info}
-                                    img={img}
+                                    img={`/assets/images/${img}`}
                                     stock={stock}
 
                                 />
@@ -81,7 +81,7 @@ function ItemListContainer() {
                                         equipo={equipo}
                                         precio={precio}
                                         info={info}
-                                        img={img}
+                                        img={`/assets/images/${img}`}
                                         stock={stock}
     
                                     />

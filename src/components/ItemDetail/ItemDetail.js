@@ -28,7 +28,7 @@ function ItemDetail({item}){
     return(
         <div className="ItemDetailCard">
             <div>
-                <img src={img} className="ItemDetailImg"></img>
+                <img src={`/assets/images/${img}`} className="ItemDetailImg"></img>
             </div>
             <div className="ItemDetailSM">
                 <p className="precios">Equipo: {equipo}</p>

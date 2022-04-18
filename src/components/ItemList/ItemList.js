@@ -15,7 +15,7 @@ function ItemList() {
                 return(
                     <div className="card" key={camiseta.id}>
                         <Item 
-                        img={camiseta.img}
+                        img={`/assets/images/${camiseta.img}`}
                         equipo={camiseta.equipo}
                         info={camiseta.info}
                         precio={camiseta.precio}
