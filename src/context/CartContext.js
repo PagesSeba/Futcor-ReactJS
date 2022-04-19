@@ -33,7 +33,7 @@ const data = {
     addProductsToCart,
     deleteProducts,
     totalPrice,
-    clearCart
+    clearCart,
 }
     
 

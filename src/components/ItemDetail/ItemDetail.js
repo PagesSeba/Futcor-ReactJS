@@ -12,7 +12,6 @@ function ItemDetail({item}){
 
 
     const onAdd = (contador) => {
-        alert(`!${contador} Camisetas de ${equipo} Agregadas al Carrito!`)
         if (contador > 0 ){
             setClick(!click)
             item.precio *=contador;

@@ -165,3 +165,47 @@ ul.navbar li {
     justify-content: space-evenly;
 }
 
+.formCompra {
+  text-align: center;
+  width: 20%;
+  margin: 100px auto;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 50px;
+}
+.formInt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.btnForm {
+  margin-bottom: 20px !important;
+}
+.formCompraLista {
+  text-align: center;
+  width: 30%;
+  margin: 100px auto;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 50px;
+}
+.orderCode{
+    font-weight: bold;
+    color: black;
+}
+.loading{
+  text-align: center;
+  margin:100px;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+}
+.load {
+  color:  #2bc29b ;
+}
