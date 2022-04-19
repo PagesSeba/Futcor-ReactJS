@@ -16,6 +16,11 @@ const Carrito = () => {
     const navigate = useNavigate()
     const { cartProducts, deleteProducts, totalPrice, clearCart } = useContext(CartContext)
     const [openModal, setOpenModal] = useState(false)
+    const [fecha] = useState (() => {
+        var fechaDelDia = new Date()
+        var today = fechaDelDia.getDate() + '/' + (fechaDelDia.getMonth() + 1) + '/' + fechaDelDia.getFullYear();
+        return today
+    })
     const [formData, setFormData] = useState(
         {
 
@@ -37,6 +42,7 @@ const Carrito = () => {
                     id: product.id,
                 }
             }),
+            date: fecha,
             total: totalPrice()
         }
 
