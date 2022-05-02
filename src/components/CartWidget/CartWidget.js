@@ -10,6 +10,7 @@ import CartContext from '../../context/CartContext';
 import { Badge } from '@mui/material';
 import {IconButton} from '@mui/material'
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import "./CartWidget.css"
 
 function CartWidget() {
     

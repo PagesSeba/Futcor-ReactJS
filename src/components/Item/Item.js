@@ -1,11 +1,10 @@
 import React  from 'react'
-import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import ItemCount from '../ItemCount/ItemCount';
+import "./Item.css"
 
 
 function Item(props) {
-    const{img , equipo , info , precio , id,  stock} = props
+    const{img , equipo , info , precio} = props
     
     return(
         <div className="sombras card">

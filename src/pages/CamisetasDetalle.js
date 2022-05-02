@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom"
-import React, { useEffect, useState } from "react"
-import { Button } from "@mui/material"
+import React from "react"
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer"
 
 const CamisetasDetalle = () => {

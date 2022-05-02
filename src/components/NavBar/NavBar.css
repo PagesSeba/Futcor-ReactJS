@@ -1,0 +1,42 @@
+.headerInicio {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px 25px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    align-items: center;
+    box-shadow: 1px 1px 10px grey;
+  }
+  
+  ul.navbar {
+    list-style: none;
+    display: flex;
+  }
+  
+  ul.navbar li {
+    margin-right: 25px;
+  }
+  
+  .linkNV {
+    text-decoration: none;
+  } 
+  
+  .imgHeader {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 70px;
+    margin-right: 25px;
+  }
+  
+  .marca {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nombreMarca {
+    font-size:larger;
+    font-style: italic;
+    font-weight: 500;
+  }

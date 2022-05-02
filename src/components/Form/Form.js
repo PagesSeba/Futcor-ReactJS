@@ -4,6 +4,7 @@ import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Checkbox from '@mui/material/Checkbox';
+import "./Form.css"
 
 const ariaLabel = { 'aria-label': 'description' };
 

@@ -1,9 +1,9 @@
-import React, {useState, useContext, useEffect} from "react";
+import React, {useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import Button from '@mui/material/Button';
 import CartContext from "../../context/CartContext";
-import {useParams} from "react-router-dom"
+import "./ItemDetail.css"
 
 function ItemDetail({item}){
     const {img, equipo, precio, stock, info, detalle, talle} = item

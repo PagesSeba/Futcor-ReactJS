@@ -11,6 +11,7 @@ import db from "../firebase"
 import { collection, addDoc } from "firebase/firestore";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import "./Carrito.css"
 
 const Carrito = () => {
     const navigate = useNavigate()
@@ -155,7 +156,7 @@ const Carrito = () => {
                     ) : (
                         <div className="formCompraLista">
                             <h3> Muchas gracias por su compra! Su orden se ha generado exitosamente</h3>
-                            <p>Su numero de órden es: <span className="orderId">{orderLista}</span></p>
+                            <p>Su numero de órden es: <span className="orderCode">{orderLista}</span></p>
                             <Button onClick={handleClose} variant="contained" color="error">Cerrar</Button>
                         </div>)
 

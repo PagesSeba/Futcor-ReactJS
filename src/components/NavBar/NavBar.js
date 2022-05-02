@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/CartWidget';
+import "./NavBar.css"
 
 
 function NavBar() {

@@ -1,0 +1,14 @@
+.cInicio {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 300px;
+    height: 400px;
+    margin-top: 30px;
+    margin-right: 100px;
+  }

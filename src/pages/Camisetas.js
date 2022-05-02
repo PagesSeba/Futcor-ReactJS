@@ -1,7 +1,6 @@
 import React from 'react';
 
 //Components
-import Container from '@mui/material/Container';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
 const Camisetas = () => {

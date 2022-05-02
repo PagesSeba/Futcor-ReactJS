@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import Item from '../Item/Item'
-import ItemCount from '../ItemCount/ItemCount'
-import ItemList from '../ItemList/ItemList'
 import {Link, useParams} from "react-router-dom"
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
-import { collection, getDocs, query , where } from "firebase/firestore"
+import { collection, getDocs} from "firebase/firestore"
 import db from "../../firebase"
+import "./ItemListContainer.css"
 
 
 

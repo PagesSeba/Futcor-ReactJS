@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import Item from "../Item/Item";
 import { doc, getDoc } from "firebase/firestore";
 import db from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom"
+import "./ItemDetailContainer.css"
 
 
 
