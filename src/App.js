@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // components
 import NavBar from './components/NavBar/NavBar'
+import Footer from './components/Footer/Footer';
 
 // pages
 import Home from './pages/Home';
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/cart" element={<Carrito />} />
                 <Route path='*' element={<Error404 />}/>
             </Routes>
+          <Footer />
         </BrowserRouter>
       </CartProvider>
     
