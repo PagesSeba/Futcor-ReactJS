@@ -14,6 +14,7 @@ import CamisetasDetalle from './pages/CamisetasDetalle';
 import Contacto from './pages/Contacto';
 import Error404 from './pages/Error404';
 import Carrito from './pages/Carrito';
+import Nosotros from './pages/Nosotros';
 
 // context
 import {CartProvider} from './context/CartContext';
@@ -30,9 +31,11 @@ function App() {
           <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path='/tienda' element={<Camisetas />} />
                 <Route path="/:category" element={<Camisetas />} />
                 <Route path="/:category/:id" element={<CamisetasDetalle />} />
                 <Route path="/contacto" element={<Contacto />} />
+                <Route path='/nosotros' element={<Nosotros />} />
                 <Route path="/cart" element={<Carrito />} />
                 <Route path='*' element={<Error404 />}/>
             </Routes>

@@ -3,7 +3,7 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 
 const Home = () => {
     return(
-            <ItemListContainer/>
+     <h1>Inicio:</h1>       
     )
 }
 
