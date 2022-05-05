@@ -1,6 +1,5 @@
 
 import React from "react";
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 import EmblaCarousel from "../components/Carousel/js/EmblaCarousel";
 import "../components/Carousel/css/embla.css"
 

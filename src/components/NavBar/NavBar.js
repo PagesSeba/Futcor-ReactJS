@@ -24,9 +24,9 @@ function NavBar() {
           <p className="nombreMarca">FUTCOR</p>
           </div>
             <ul className="navbar">
-              <li><Link to={'/'} className="linkNV"><Button className='subMenuColor'>Inicio</Button></Link></li>
+              <li><Link to={'/'} className="linkNV"><Button className='navBtn'>Inicio</Button></Link></li>
               <li><Button   
-                            className='subMenuColor'
+                            className='navBtn'
                             id="basic-button"
                             aria-controls={open ? 'basic-menu' : undefined}
                             aria-haspopup="true"
@@ -49,8 +49,8 @@ function NavBar() {
                             <Link to={"/Suplente"}  className="linkNV"><MenuItem className="subMenuColor" onClick={handleClose}>Suplentes</MenuItem></Link>
                         </Menu>
                         </li>
-              <li><Link to={'/nosotros'} className="linkNV"><Button className='subMenuColor'>Nosotros</Button></Link></li>
-              <li><Link to={'/contacto'} className="linkNV"><Button className='subMenuColor'>Contacto</Button></Link></li>
+              <li><Link to={'/nosotros'} className="linkNV"><Button className='navBtn'>Nosotros</Button></Link></li>
+              <li><Link to={'/contacto'} className="linkNV"><Button className='navBtn'>Contacto</Button></Link></li>
             </ul>
             <CartWidget></CartWidget>
       </header>

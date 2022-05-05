@@ -6,7 +6,7 @@
   }
   .Carro {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     border-bottom: 1px black dotted;
     margin-bottom: 10px;
@@ -14,6 +14,8 @@
   .imgCarro {
     width: 200px;
     height: auto;
+    position: relative;
+    left: -35px;
   }
   .btnCartWidget {
       display: flex;
@@ -61,4 +63,32 @@
     align-self: center;
     justify-self: center;
     align-items: center;
+  }
+  .tablaCarrito {
+    width: 100%;
+  }
+  .carritoHeader {
+    display: flex;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    justify-content: space-evenly;
+  }
+  .descItemCarro{
+    position: relative;
+    left: -86px;
+  }
+
+  .precioUnidadItemCarro {
+    position: relative;
+    left: -70px;
+  }
+
+  .precioItemCarro {
+    position: relative;
+    left: 35px;
+}
+  
+  .borrarItemCarro {
+    position: relative;
+    left: 50px;
   }

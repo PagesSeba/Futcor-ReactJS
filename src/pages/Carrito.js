@@ -41,6 +41,7 @@ const Carrito = () => {
                     precio: product.precio,
                     cantidad: product.cantidad,
                     id: product.id,
+                    
                 }
             }),
             date: fecha,
@@ -96,22 +97,52 @@ const Carrito = () => {
             {
                 cartProducts.length ? (
 
-                    <div>
+                    <Container>
+                        <div className="carritoSection">
+                        <table className="tablaCarrito">
+                        <thead>
+                            <tr className='carritoHeader'>
+                                <th>Producto</th>
+                                <th>Descripcion</th>
+                                <th>Precio Unitario</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                     {cartProducts.map((product) => {
                         return (
                         <Container>
-                            <div className="Carro"><img className="imgCarro" src={`/assets/images/${product.img}`} />
-                                <p className="precios">Camiseta: {product.equipo} {product.categoria}</p>
-                                <p className="precios">Precio: ${product.precio}</p>
-                                <p className="precios">Cantidad: {product.cantidad}</p>
-                                <IconButton >
-                                    <DeleteIcon onClick={() => deleteProducts(product)} color="error"/>
-                                </IconButton>
+                            <tr className="Carro">
+                                <td>
+                                    <img className="imgCarro" src={`/assets/images/${product.img}`} />
+                                </td>
+                                <td>
+                                    <p className="precios descItemCarro">{product.equipo} {product.categoria}</p>
+                                </td>
+                                <td>
+                                    <p className="precios precioUnidadItemCarro">${product.precioUnitario}</p>
+                                </td>
+                                <td>
+                                    <p className="precios cantItemCarro">{product.cantidad}</p>
+                                </td>
+                                <td>
+                                    <p className="precios precioItemCarro">${product.precio}</p>
+                                </td>
+                                <td className="borrarItemCarro">
+                                    <IconButton >
+                                        <DeleteIcon onClick={() => deleteProducts(product)} color="error"/>
+                                    </IconButton>
+                                </td>
                                 <Divider />
-                            </div>
-                        </Container>)
-
+                            </tr>
+                        </Container>
+                        )
+                        
                     })}
+                    </tbody>
+                    </table>
 
                     <Container className="pTotal">
                         <h4>Total: ${totalPrice()}</h4>
@@ -122,11 +153,12 @@ const Carrito = () => {
                     </Container>
 
                     </div>
+                    </Container>
 
                 ) : (
                     <div className="cartVacio">
                         <p> No hay camisetas en el carrito.</p>
-                        <Link to={"/"} className="linkNV" ><Button color="warning">Camisetas</Button></Link>
+                        <Link to={"/tienda"} className="linkNV" ><Button color="warning">Camisetas</Button></Link>
                     </div>
                 )
 

@@ -10,6 +10,9 @@
   .imgCarrito{
     width: 100px;
   }
+  .iconoCart {
+    color: #fff;
+  }
   .desplegableCart {
    text-align: center;
   }

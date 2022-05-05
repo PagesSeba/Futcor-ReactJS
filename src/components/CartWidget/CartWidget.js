@@ -33,8 +33,9 @@ function CartWidget() {
     cantidadItems ? (
         <>
         <div>
-          <Badge badgeContent={cantidadItems} color="primary" showZero>
+          <Badge badgeContent={cantidadItems} color="warning" showZero>
             <ShoppingCartIcon 
+                className="iconoCart"
                 id="basic-button"
                 aria-controls={open ? 'basic-menu' : undefined}
                 aria-haspopup="true"
