@@ -25,7 +25,7 @@ function Footer() {
                             <WhatsAppIcon />
                         </IconButton>
                     </Link>
-                    <Link to={""} className="linkNV">
+                    <Link to={""}  className="linkNV">
                         <IconButton className="ig iconsFooter">
                             <InstagramIcon />
                         </IconButton>

@@ -24,15 +24,16 @@ function NavBar() {
           <p className="nombreMarca">FUTCOR</p>
           </div>
             <ul className="navbar">
-              <li><Link to={'/'} className="linkNV"><Button>Inicio</Button></Link></li>
-              <li><Button
+              <li><Link to={'/'} className="linkNV"><Button className='subMenuColor'>Inicio</Button></Link></li>
+              <li><Button   
+                            className='subMenuColor'
                             id="basic-button"
                             aria-controls={open ? 'basic-menu' : undefined}
                             aria-haspopup="true"
                             aria-expanded={open ? 'true' : undefined}
                             onClick={handleClick}
                         >
-                            Tienda
+                            Camisetas
                         </Button>
                         <Menu
                             id="basic-menu"
@@ -48,8 +49,8 @@ function NavBar() {
                             <Link to={"/Suplente"}  className="linkNV"><MenuItem className="subMenuColor" onClick={handleClose}>Suplentes</MenuItem></Link>
                         </Menu>
                         </li>
-              <li><Link to={'/nosotros'} className="linkNV"><Button>Nosotros</Button></Link></li>
-              <li><Link to={'/contacto'} className="linkNV"><Button>Contacto</Button></Link></li>
+              <li><Link to={'/nosotros'} className="linkNV"><Button className='subMenuColor'>Nosotros</Button></Link></li>
+              <li><Link to={'/contacto'} className="linkNV"><Button className='subMenuColor'>Contacto</Button></Link></li>
             </ul>
             <CartWidget></CartWidget>
       </header>

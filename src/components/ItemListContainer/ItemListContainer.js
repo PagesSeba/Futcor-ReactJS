@@ -77,7 +77,7 @@ function ItemListContainer() {
                         else {
                             return (
                             
-                                <Link className='card linkNV negro' to={`./${categoria}/${id}`}>
+                                <Link className='card linkNV negro' to={`./${id}`}>
                                 <div key={id} className="sombras" >
                                     <Item
                                         equipo={equipo}

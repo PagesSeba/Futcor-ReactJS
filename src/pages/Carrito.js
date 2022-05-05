@@ -140,9 +140,9 @@ const Carrito = () => {
                     <div className="formCompra">
                         <h2>Finalizar Compra</h2>
                         <form className="formInt" onSubmit={formSubmit}>
-                            <input type="text" name="name" placeholder="Introduzca Nombre Completo" onChange={infoComprador} value={formData.name} required />
-                            <input type="number" name="phone" placeholder="Introduzca Número de Telefono" onChange={infoComprador} value={formData.phone} required />
-                            <input type="mail" name="email" placeholder="Introduzca Correo Electrónico" onChange={infoComprador} value={formData.email} required />
+                            <input type="text" name="name" placeholder="Nombre Completo" onChange={infoComprador} value={formData.name} required />
+                            <input type="number" name="phone" placeholder="Número de Telefono" onChange={infoComprador} value={formData.phone} required />
+                            <input type="mail" name="email" placeholder="Correo Electrónico" onChange={infoComprador} value={formData.email} required />
                             <Button type="submit" variant="contained" color="warning" className="btnForm">Enviar</Button>
                         </form>
 
