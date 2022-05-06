@@ -14,7 +14,7 @@ import "./CartWidget.css"
 
 function CartWidget() {
     
-    const { cartProducts, deleteProducts, clearCart} = useContext(CartContext)
+    const { cartProducts, deleteProducts, clearCart, cantidadItems} = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -25,15 +25,11 @@ function CartWidget() {
     };
     console.log("cartProducts: ", cartProducts)
 
-    let cantidadItems = cartProducts.length
   
     return (
-    <>
-        {
-    cantidadItems ? (
         <>
         <div>
-          <Badge badgeContent={cantidadItems} color="warning" showZero>
+          <Badge badgeContent={cantidadItems()} color="warning" showZero>
             <ShoppingCartIcon 
                 className="iconoCart"
                 id="basic-button"
@@ -100,12 +96,6 @@ function CartWidget() {
         </div>
     
         </>
-    ):(
-          <div></div>
-        )
-      }
-
-    </>
   )
     
     }

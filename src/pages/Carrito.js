@@ -38,7 +38,8 @@ const Carrito = () => {
                 return {
                     equipo: product.equipo,
                     categoria: product.categoria,
-                    precio: product.precio,
+                    precioUnitario: product.precio,
+                    precioFinal: product.precio*product.cantidad,
                     cantidad: product.cantidad,
                     id: product.id,
                     
@@ -122,13 +123,13 @@ const Carrito = () => {
                                     <p className="precios descItemCarro">{product.equipo} {product.categoria}</p>
                                 </td>
                                 <td>
-                                    <p className="precios precioUnidadItemCarro">${product.precioUnitario}</p>
+                                    <p className="precios precioUnidadItemCarro">${product.precio}</p>
                                 </td>
                                 <td>
                                     <p className="precios cantItemCarro">{product.cantidad}</p>
                                 </td>
                                 <td>
-                                    <p className="precios precioItemCarro">${product.precio}</p>
+                                    <p className="precios precioItemCarro">${product.precio*product.cantidad}</p>
                                 </td>
                                 <td className="borrarItemCarro">
                                     <IconButton >
@@ -158,7 +159,7 @@ const Carrito = () => {
                 ) : (
                     <div className="cartVacio">
                         <p> No hay camisetas en el carrito.</p>
-                        <Link to={"/tienda"} className="linkNV" ><Button color="warning">Camisetas</Button></Link>
+                        <Link to={"/"} className="linkNV" ><Button color="warning">Camisetas</Button></Link>
                     </div>
                 )
 

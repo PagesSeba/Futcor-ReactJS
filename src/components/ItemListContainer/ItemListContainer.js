@@ -23,6 +23,7 @@ function ItemListContainer() {
             return product
         })
         return productList
+    
     }
 
     useEffect(() => {
@@ -77,7 +78,7 @@ function ItemListContainer() {
                         else {
                             return (
                             
-                                <Link className='card linkNV negro' to={`./${id}`}>
+                                <Link className='card linkNV negro' to={`./${categoria}/${id}`}>
                                 <div key={id} className="sombras" >
                                     <Item
                                         equipo={equipo}

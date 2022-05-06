@@ -1,5 +1,5 @@
-
 import React from "react";
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
 import EmblaCarousel from "../components/Carousel/js/EmblaCarousel";
 import "../components/Carousel/css/embla.css"
 
@@ -7,6 +7,7 @@ const SLIDE_COUNT = 4;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
 
 const Home = () => {
+    
     return(
         <div>
             <div>
@@ -16,7 +17,9 @@ const Home = () => {
                 <h3>Proximos Ingresos:</h3>
                 <EmblaCarousel slides={slides}/>
             </div>
-            </div>
+            <h2>Todas las camisetas:</h2>
+            <ItemListContainer />
+        </div>
      )
 }
 

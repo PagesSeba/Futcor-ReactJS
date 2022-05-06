@@ -44,7 +44,6 @@ function NavBar() {
                                 'aria-labelledby': 'basic-button',
                             }}
                         >
-                            <Link to={"/tienda"}  className="linkNV" ><MenuItem className="subMenuColor" onClick={handleClose} >Todas</MenuItem></Link>
                             <Link to={"/Titular"}  className="linkNV"><MenuItem className="subMenuColor" onClick={handleClose}>Locales</MenuItem></Link>
                             <Link to={"/Suplente"}  className="linkNV"><MenuItem className="subMenuColor" onClick={handleClose}>Suplentes</MenuItem></Link>
                         </Menu>

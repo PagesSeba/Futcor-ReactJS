@@ -6,15 +6,15 @@ import CartContext from "../../context/CartContext";
 import "./ItemDetail.css"
 
 function ItemDetail({item}){
-    const {img, equipo, precio, stock, info, detalle, talle, precioUnitario} = item
+    const {img, equipo, precio, stock, info, detalle, talle} = item
     const {cartProducts, addProductsToCart} = useContext(CartContext)
     const [click, setClick] = useState(true);
 
+    
 
     const onAdd = (contador) => {
         if (contador > 0 ){
             setClick(!click)
-            item.precio *=contador;
             item.stock-=contador;
             item.cantidad=contador;
             addProductsToCart(item);
@@ -34,7 +34,7 @@ function ItemDetail({item}){
                 <p className="precios">Información: {info}</p>
                 <p className="precios">Talle: {talle}</p>
                 <p className="precios">Detalle: {detalle}</p>
-                <p className="precios">Precio: ${precioUnitario}</p>
+                <p className="precios">Precio: ${precio}</p>
                 { click ? (
                     <div>
                             <ItemCount stock={stock} onAdd={onAdd} initial={1}/>

@@ -32,9 +32,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path='*' element={<Error404 />}/>
-                <Route path="/tienda" element={<Camisetas />} />
                 <Route path="/:category" element={<Camisetas />} />
-                <Route path="/:tienda/:id" element={<CamisetasDetalle />} />
+                <Route path="/:category/:id" element={<CamisetasDetalle />} />
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path='/nosotros' element={<Nosotros />} />
                 <Route path="/cart" element={<Carrito />} />
