@@ -27,4 +27,7 @@ y luego correrlo mediante:
 
 con este segundo comando, se abre una pestaña con el proyecto en el puerto 3000 de su navegador.
 
-- Realizado por Sebastián Pagés
+## Gif Funcionalidad
+![]()
+
+### Realizado por Sebastián Pagés

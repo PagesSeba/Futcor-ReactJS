@@ -14,6 +14,7 @@ import CamisetasDetalle from './pages/CamisetasDetalle';
 import Contacto from './pages/Contacto';
 import Error404 from './pages/Error404';
 import Carrito from './pages/Carrito';
+import Checkout from './pages/Checkout';
 import Nosotros from './pages/Nosotros';
 
 // context
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path='/nosotros' element={<Nosotros />} />
                 <Route path="/cart" element={<Carrito />} />
+                <Route path="/checkout" element={<Checkout />} />
             </Routes>
           <Footer />
         </BrowserRouter>

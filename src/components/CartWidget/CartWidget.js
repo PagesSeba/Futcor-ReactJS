@@ -29,7 +29,7 @@ function CartWidget() {
     return (
         <>
         <div>
-          <Badge badgeContent={cantidadItems()} color="warning" showZero>
+          <Badge badgeContent={cantidadItems()} color="warning" >
             <ShoppingCartIcon 
                 className="iconoCart"
                 id="basic-button"
