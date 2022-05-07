@@ -28,6 +28,6 @@ y luego correrlo mediante:
 con este segundo comando, se abre una pestaña con el proyecto en el puerto 3000 de su navegador.
 
 ## Gif Funcionalidad
-![]()
+![image](https://github.com/PagesSeba/Futcor-ReactJS/blob/main/public/FutCorgf.gif)
 
 ### Realizado por Sebastián Pagés

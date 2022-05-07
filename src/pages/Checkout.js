@@ -98,7 +98,7 @@ const Checkout = () => {
                                 <Button type="submit" variant="contained" color="primary" className="btnForm">Enviar</Button>
                             </form>
                         </div>
-                        <div className="checkoutForm">
+                        <div>
                             
                         <h4 className="resumenTop">Tu compra</h4>
                         {cartProducts.map((product) => {
