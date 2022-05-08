@@ -26,7 +26,7 @@ function ItemDetailContainer() {
             setCasaca(product)
     
         } else {
-            navigate("/Error404")
+            navigate("*")
 
         }
     }

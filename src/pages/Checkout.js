@@ -58,7 +58,7 @@ const Checkout = () => {
     }
 
 
-    const infoComprador = (e) => {
+    const dataUsuario = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -92,9 +92,9 @@ const Checkout = () => {
                         <div className="formCompra">
                             <h2>Finalizar Compra</h2>
                             <form className="formInt" onSubmit={formSubmit}>
-                                <Input type="text" name="name" placeholder="Nombre Completo" onChange={infoComprador} value={formData.name} required />
-                                <Input type="number" name="phone" placeholder="Número de Telefono" onChange={infoComprador} value={formData.phone} required />
-                                <Input type="mail" name="email" placeholder="Correo Electrónico" onChange={infoComprador} value={formData.email} required />
+                                <Input type="text" name="name" placeholder="Nombre Completo" onChange={dataUsuario} value={formData.name} required />
+                                <Input type="number" name="phone" placeholder="Número de Telefono" onChange={dataUsuario} value={formData.phone} required />
+                                <Input type="mail" id="email" name="email" placeholder="Correo Electrónico" onChange={dataUsuario} value={formData.email} required />
                                 <Button type="submit" variant="contained" color="primary" className="btnForm">Enviar</Button>
                             </form>
                         </div>
