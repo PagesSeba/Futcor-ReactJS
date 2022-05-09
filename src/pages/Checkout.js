@@ -2,7 +2,7 @@ import React from "react";
 import "./Checkout.css"
 import { useContext, useState } from "react"
 import CartContext from "../context/CartContext"
-import { Button, Input } from "@mui/material";
+import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom"
 import db from "../firebase"
 import { collection, addDoc } from "firebase/firestore";
@@ -12,6 +12,7 @@ import Box from '@mui/material/Box';
 const Checkout = () => {
     const navigate = useNavigate()
     const { cartProducts, totalPrice, clearCart } = useContext(CartContext)
+
     const [fecha] = useState (() => {
         var fechaDelDia = new Date()
         var today = fechaDelDia.getDate() + '/' + (fechaDelDia.getMonth() + 1) + '/' + fechaDelDia.getFullYear();
@@ -23,6 +24,7 @@ const Checkout = () => {
             name: "",
             phone: "",
             email: "",
+           
 
         }
     )
@@ -67,14 +69,15 @@ const Checkout = () => {
     }
     const formSubmit = (e) => {
 
-        e.preventDefault()
-        setOrder({
-            ...order,
-            buyer: formData
-        })
-        sendOrder()
-
-        setLoading(false)
+            
+            e.preventDefault()
+            setOrder({
+                ...order,
+                buyer: formData
+            })
+            sendOrder()
+    
+            setLoading(false)
 
     }
     const handleClose = () => {
@@ -92,9 +95,10 @@ const Checkout = () => {
                         <div className="formCompra">
                             <h2>Finalizar Compra</h2>
                             <form className="formInt" onSubmit={formSubmit}>
-                                <Input type="text" name="name" placeholder="Nombre Completo" onChange={dataUsuario} value={formData.name} required />
-                                <Input type="number" name="phone" placeholder="Número de Telefono" onChange={dataUsuario} value={formData.phone} required />
-                                <Input type="mail" id="email" name="email" placeholder="Correo Electrónico" onChange={dataUsuario} value={formData.email} required />
+                                <input className="inputsCheckout" type="text" name="name" placeholder="Nombre Completo" onChange={dataUsuario} value={formData.name} required />
+                                <input className="inputsCheckout" type="number" name="phone" placeholder="Número de Telefono" onChange={dataUsuario} value={formData.phone} required />
+                                <input className="inputsCheckout" type="mail" id="email" name="email" placeholder="Correo Electrónico" onChange={dataUsuario} value={formData.email} required />
+                                <input className="inputsCheckout" type="mail" id="emailR" name="emailR" placeholder="Repita su Correo Electrónico" onChange={dataUsuario} value={formData.repeatEmail} pattern={formData.email} required />
                                 <Button type="submit" variant="contained" color="primary" className="btnForm">Enviar</Button>
                             </form>
                         </div>
